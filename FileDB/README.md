@@ -20,7 +20,10 @@ This system supports following commands`
 4. `update`
     - updates existing values using id.
     - example: update id=1 name=B
-
+5. `display`
+    - displays given object.
+    - example: display User
+    
 ## Requirements
 
 - C++ compiler.
