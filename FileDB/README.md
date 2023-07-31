@@ -23,11 +23,14 @@ This system supports following commands`
 5. `display`
     - displays given object.
     - example: display User
-    
+6. `exit`
+    - exits program saving all info.
+    - example: exit
+
 ## Requirements
 
 - C++ compiler.
-- Cmake (can be compiled directly).
+- CMake (can be compiled directly).
 
 ## Usage
 
