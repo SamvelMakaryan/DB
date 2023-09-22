@@ -1,6 +1,8 @@
 #include <stdexcept>
 #include <iostream>
 #include <sstream>
+#include <csignal>
+#include <cstdlib>
 #include <vector>
 #include <string>
 #include <tuple>
@@ -8,7 +10,13 @@
 #include "FileSystem.hpp"
 #include "Parser.hpp"
 
+void signal_handler(int signal) {
+	std::cout << "\nClosing DB" << std::endl;
+	std::exit(EXIT_SUCCESS);
+}
+
 int main() {
+	std::signal(SIGINT, signal_handler);
     constexpr const int command = 0;
     constexpr const int name = 1;
     constexpr const int arguments = 2;
